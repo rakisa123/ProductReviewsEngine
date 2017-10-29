@@ -1,4 +1,4 @@
-# JPA One to Many Relationship Example with Spring Boot, Maven, and H2 database
+# Product Reviews engine developed to handle the products and reviews operations
 
 ## Things covered during the development:
 – SpringBoot project
@@ -13,12 +13,42 @@
 - Maven 3 or later
 - STS/Eclipse/Intellij IDE
 
+## Installation
+
+1. Download and Install Spring Tool Suite (STS) as an ID
+2. Install Project Lombok on your IDE (if applicable)
+      a. Go to https://projectlombok.org/
+      b. Download the lombok.jar executable
+      c. Double click or use lombok.jar to install it to your IDE
+3. Install java https://java.com/en/download/help/windows_manual_download.xml 
+4. Install MAVEN https://www.mkyong.com/maven/how-to-install-maven-in-windows/ 
+
 ## Stack
 - Spring Data JPA
 - Spring Boot
 - H2 Database
 
 ## Source Code
+```sh
+https://github.com/rakisa123/ProductReviewsEngine.git
+```
+
+## Build, Test and Run (Local Development)
+
+Download and run the application locally through the STS IDE:-
+
+1. git clone https://github.com/rakisa123/ProductReviewsEngine.git into your local directory of choice (using the command line or your Git tool of choice)
+2. Open the STS IDE that was downloaded during the installation steps
+3. Right click the package explorer and select Import...
+4. Under Maven, choose Existing Maven Projects
+5. For root directory, browse to the folder created after git cloning
+6. Select Finish
+7. Right-click the project in Package Explorer, select Run As -> Spring Boot App
+8. To test that it's working, open your browser to http://localhost:8080/products
+
+IMPORTANT NOTE: If the app fails to run, this is probably due to permissions with the log file location. This is easily fixed by finding logback.xml under src/main/resources and changing the LOG_PATH property to point to a location that's not system protected. If you wish you may use the following line as a replacement: (by default in the root folder with the name )
+`intuit.productreviews.service.logpath`
+
 
 ## Build & Run
 ProductReviews service uses H2 database. Connection properties (and other properties) are located in application.yml
@@ -28,25 +58,26 @@ Build service from the command line:
 ```sh
 mvn clean package
 ```
-
-Start service from the command line:
+Run service from the command line:
 ```sh
 java -jar ProductReviews-1.jar
 ```
 
 Actuator endpoints: (exposed on port 8081)
 These endpoints will monitor and let the health, metrics of the service
-```sh
+```s
 http://localhost:8081/manage/health
 http://localhost:8081/manage/metrics
 ```
 
-Sample API calls: (exposed on port 8080)
+#Sample API calls: (exposed on port 8080)
 
 CREATE Product: POST request
 A product can be created by providing its name:
 ```sh
-URL: localhost:8080/products
+## Tests
+To run unit tests for this project:
+mvn clean testURL: localhost:8080/products
 Body:
 {
 	"name": "Iphone X"
@@ -108,5 +139,10 @@ PRODUCT:
   }
 ```
 
+## Tests
+To run unit tests for this project:
+mvn clean test
 
+This will run all unit tests and generate reports which are uploaded to sonarQube or your own reporting server. <br/>
+You can view code coverage and quality report for ProductReviews engine here()
 
