@@ -22,4 +22,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-intuit.productreviews.service.logPath_IS_UNDEFINED
