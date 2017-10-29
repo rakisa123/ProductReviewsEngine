@@ -1,6 +1,6 @@
-# Product Reviews engine developed to handle the products and reviews operations
+## Product Reviews engine developed to handle the products and reviews operations
 
-## Things covered during the development:
+## Things covered during the development
 – SpringBoot project
 – Create Models
 – Create JPA Repositories
@@ -31,6 +31,10 @@
 ## Source Code
 ```sh
 https://github.com/rakisa123/ProductReviewsEngine.git
+```
+## Swagger Documentation
+```sh
+http://localhost:8080/swagger-ui.html
 ```
 
 ## Build, Test and Run (Local Development)
@@ -70,12 +74,12 @@ http://localhost:8081/manage/health
 http://localhost:8081/manage/metrics
 ```
 
-#Sample API calls: (exposed on port 8080)
+## Sample API calls (exposed on port 8080)
 
 CREATE Product: POST request
 A product can be created by providing its name:
 ```sh
-## Tests
+# Tests
 To run unit tests for this project:
 mvn clean testURL: localhost:8080/products
 Body:
@@ -94,7 +98,6 @@ To fetch all reviews and aggregated score for a given product, fetch the specifi
 ```sh
 http://localhost:8080/products/1
 ```
-
 CREATE Review: POST request
 A review can be created associated to a give product:
 ```sh
@@ -108,7 +111,7 @@ Body:
 }
 ```
 
-API RESPONSE:
+## API RESPONSE
 REVIEW:
 ```sh
 "reviews": [
@@ -144,5 +147,5 @@ To run unit tests for this project:
 mvn clean test
 
 This will run all unit tests and generate reports which are uploaded to sonarQube or your own reporting server. <br/>
-You can view code coverage and quality report for ProductReviews engine here()
+You can view code coverage and quality report for ProductReviews engine here
 
