@@ -143,9 +143,16 @@ PRODUCT:
 ```
 
 ## Tests
+Unit Tests:
 To run unit tests for this project:
+```sh
 mvn clean test
+```
+This will run all unit tests and generate reports which are uploaded to sonarQube or your own reporting server.
 
-This will run all unit tests and generate reports which are uploaded to sonarQube or your own reporting server. <br/>
-You can view code coverage and quality report for ProductReviews engine here
+Integration Tests:
+To run integration tests for this project:
+```sh
+mvn verify
+```
 

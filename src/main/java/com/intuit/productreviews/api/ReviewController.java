@@ -39,7 +39,7 @@ public class ReviewController {
 
 	@ApiOperation(value = "Save reviews for the given product")
 	@RequestMapping(method = RequestMethod.POST)
-	ResponseEntity<Long> reviews(@Valid @RequestBody ReviewRequestDto input) {
+	public ResponseEntity<Long> reviews(@Valid @RequestBody ReviewRequestDto input) {
 		if (utils.validateReviewRequest(input)) {
 			logger.info("Review request validation succeeded");
 			Review review = utils.getReviewModel(input);

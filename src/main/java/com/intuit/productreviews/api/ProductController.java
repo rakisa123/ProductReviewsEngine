@@ -38,7 +38,7 @@ public class ProductController {
 
 	@ApiOperation(value = "Save product")
 	@RequestMapping(method = RequestMethod.POST)
-	ResponseEntity<Long> products(@Valid @RequestBody ProductRequestDto input) {		
+	public ResponseEntity<Long> products(@Valid @RequestBody ProductRequestDto input) {		
 		if (utils.validateProductRequest(input)) {
 			Product product = utils.getProductModel(input);
 			return new ResponseEntity<>(productService.saveProduct(product), HttpStatus.CREATED);

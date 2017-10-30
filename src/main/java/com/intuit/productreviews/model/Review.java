@@ -3,6 +3,7 @@ package com.intuit.productreviews.model;
 import java.time.Instant;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -38,7 +39,7 @@ public class Review{
 	private double score;
 	private String description;
 	private Date dateAdded;
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     @JoinColumn(name = "product_id")
 	@JsonBackReference
 	private Product product;
