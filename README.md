@@ -51,7 +51,7 @@ Download and run the application locally through the STS IDE:-
 8. To test that it's working, open your browser to http://localhost:8080/products
 
 IMPORTANT NOTE: If the app fails to run, this is probably due to permissions with the log file location. This is easily fixed by finding logback.xml under src/main/resources and changing the LOG_PATH property to point to a location that's not system protected. If you wish you may use the following line as a replacement: (by default in the root folder with the name )
-`intuit.productreviews.service.logpath`
+`org.productreviews.service.logpath`
 
 
 ## Build & Run

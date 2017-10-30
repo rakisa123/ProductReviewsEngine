@@ -1,6 +1,6 @@
 <configuration>
     <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
     <!-- environment variable to have dynamic log location -->
-    <property name="LOG_FILE" value="${intuit.productreviews.service.logPath}"/>
+    <property name="LOG_FILE" value="${org.productreviews.service.logPath}"/>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 </configuration>
