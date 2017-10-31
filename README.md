@@ -89,7 +89,8 @@ A product can be created by providing its name:
 ```sh
 # Tests
 To run unit tests for this project:
-mvn clean testURL: localhost:8080/products
+mvn clean test
+URL: localhost:8080/products
 Body:
 {
 	"name": "Iphone X"
