@@ -1,4 +1,4 @@
-## Product Reviews engine developed to handle the products and reviews operations
+## Product Reviews engine developed to handle the products and reviews operation
 
 ## Things covered during the development
 – SpringBoot project
@@ -16,6 +16,7 @@
 ## Installation
 
 1. Download and Install Spring Tool Suite (STS) as an ID
+
 2. Install Project Lombok on your IDE (if applicable)
       a. Go to https://projectlombok.org/
       b. Download the lombok.jar executable
@@ -32,9 +33,16 @@
 ```sh
 https://github.com/rakisa123/ProductReviewsEngine.git
 ```
+
+## AWS Hosting Endpoint
+```sh
+http://productreviews.us-west-1.elasticbeanstalk.com
+```
+
 ## Swagger Documentation
 ```sh
 http://localhost:8080/swagger-ui.html
+http://productreviews.us-west-1.elasticbeanstalk.com/swagger-ui.html
 ```
 
 ## Build, Test and Run (Local Development)
