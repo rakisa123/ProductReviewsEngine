@@ -48,7 +48,7 @@ public class Review{
 
 	// Constructors
 	public Review() {
-
+		this.dateAdded = Date.from(Instant.now());// UTC
 	}
 
 	public Review(double score, String comment, Product product, String userId) {
